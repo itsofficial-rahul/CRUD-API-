@@ -112,3 +112,23 @@
 // }
 
 // console.log(data("oooooooh", "o"));
+
+// console.log(data("webdevelopewwr"));
+
+//  occurance in string 
+//+++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++
+function data(str) {
+    let occurance = {}
+    for (let index = 0; index < str.length; index++) {
+        if (occurance[str[index]] >= 1)
+            occurance[str[index]] += 1
+        else {
+            occurance[str[index]] = 1
+        }
+
+    }
+    return occurance
+}
+console.log(data("rahul choudhary"));
+
