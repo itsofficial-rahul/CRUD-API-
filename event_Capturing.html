@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="container" style="border: 1px solid black;height: 100px;width: 100px;">
+        <div id="container-fluid" style="border: 1px solid red;height: 50px;width: 50px;">
+
+            <div id="container-fluid-child" style="border: 1px solid red;height: 25px;width: 25px;">
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const data = document.getElementById("container")
+        data.addEventListener("click", function () {
+
+            alert("grandparent")
+
+
+        }, true)
+        const data2 = document.getElementById("container-fluid-child")
+        data2.addEventListener("click", function () {
+
+            alert("child")
+
+
+        }, true)
+        const data1 = document.getElementById("container-fluid")
+        data1.addEventListener("click", function () {
+
+            alert("parent")
+
+
+        }, true)
+    </script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const parentcall = () => {
+            alert("grandparent call")
+        }
+        const chiledcall = () => {
+            alert("parentcall")
+            e.preventDefault()
+            event.stopPropagation()
+        }
+        const chidcall = () => {
+            alert("chield call")
+        }
+    </script>
+    <style>
+        .parentdiv {
+            border: 2px solid red;
+            height: 50px;
+        }
+        
+        .chileddiv {
+            border: 2px solid rgb(25, 0, 255);
+            height: 30px;
+        }
+        
+        .chied2 {
+            border: 2px solid rgb(25, 0, 255);
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parentdiv" onclick="parentcall()">
+        <div class="chileddiv" onclick="chiledcall()">
+            <div class="chied2" onclick="chidcall()">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
